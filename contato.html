@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Pet Shop Amigo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="barra-acessibilidade" role="region" aria-label="Ferramentas de Acessibilidade">
+    <div class="container">
+      <span>Acessibilidade:</span>
+      <button id="btn-aumentar">A +</button>
+      <button id="btn-diminuir">A -</button>
+      <button id="btn-contraste">Alto Contraste</button>
+    </div>
+  </aside>
+
+  <header class="cabecalho">
+    <div class="container">
+      <h1>🐶 Pet Shop Amigo</h1>
+      <nav aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="adocao.html">Adote um Pet</a></li>
+          <li><a href="contato.html" class="ativo">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="secao">
+      <h2>Fale Conosco / Solicitar Agendamento ou Adoção</h2>
+      <p><strong>Comunicação 100% por Texto:</strong> Responderemos sem realizar chamadas telefônicas por áudio.</p>
+
+      <form class="formulario" onsubmit="alert('Sua mensagem foi enviada! Responderemos por mensagem escrita.'); return false;">
+        <label for="nome">Seu Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+
+        <label for="assunto">Qual é o motivo do contato?</label>
+        <select id="assunto" name="assunto">
+          <option value="adocao">Interesse em Adoção</option>
+          <option value="servico">Agendar Serviço de Pet Shop</option>
+          <option value="duvidas">Dúvidas Gerais</option>
+        </select>
+
+        <label for="pet">Nome do Pet (Adoção ou seu animal):</label>
+        <input type="text" id="pet" name="pet" placeholder="Ex: Pipoca, Mimi ou nome do seu pet">
+
+        <label for="preferencia">Como deseja receber nossa resposta?</label>
+        <select id="preferencia" name="preferencia">
+          <option value="whatsapp">WhatsApp (Apenas Mensagem de Texto)</option>
+          <option value="email">E-mail</option>
+          <option value="sms">SMS</option>
+        </select>
+
+        <label for="mensagem">Mensagem / Preferências de Acessibilidade:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva aqui suas dúvidas ou necessidades específicas..."></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape"><div class="container"><p>&copy; 2026 Pet Shop Amigo.</p></div></footer>
+
+  <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    let tamanho = 100;
+    document.getElementById('btn-aumentar').onclick = () => { if(tamanho < 150){ tamanho += 10; document.body.style.fontSize = tamanho + '%'; } };
+    document.getElementById('btn-diminuir').onclick = () => { if(tamanho > 80){ tamanho -= 10; document.body.style.fontSize = tamanho + '%'; } };
+    document.getElementById('btn-contraste').onclick = () => { document.body.classList.toggle('alto-contraste'); };
+  </script>
+</body>
+</html>

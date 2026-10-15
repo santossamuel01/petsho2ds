@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início - Pet Shop Amigo & Adoção</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BARRA DE ACESSIBILIDADE -->
+  <aside class="barra-acessibilidade" role="region" aria-label="Ferramentas de Acessibilidade">
+    <div class="container">
+      <span id="label-acessibilidade">Acessibilidade:</span>
+      <button id="btn-aumentar" aria-label="Aumentar texto">A +</button>
+      <button id="btn-diminuir" aria-label="Diminuir texto">A -</button>
+      <button id="btn-contraste" aria-label="Alto Contraste">Alto Contraste</button>
+    </div>
+  </aside>
+
+  <!-- MENU NAVEGAÇÃO -->
+  <header class="cabecalho">
+    <div class="container">
+      <h1>🐶 Pet Shop Amigo</h1>
+      <nav aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html" class="ativo">Início</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="adocao.html">Adote um Pet</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Bem-vindo ao Pet Shop Amigo e Centro de Adoção</h2>
+      <p>Um espaço planejado com silêncio, tranquilidade e acessibilidade para tutores e animais.</p>
+    </section>
+
+    <section class="secao">
+      <h2>O que você procura hoje?</h2>
+      <div class="grid-cards">
+        <article class="card">
+          <span class="icone" aria-hidden="true">✂️</span>
+          <h3>Serviços Sensoriais</h3>
+          <p>Banho, tosa e atendimento veterinário sem ruídos excessivos ou estresse.</p>
+          <a href="servicos.html" class="btn-acao">Ver Serviços</a>
+        </article>
+
+        <article class="card card-adocao">
+          <span class="icone" aria-hidden="true">🐾</span>
+          <h3>Adoção Responsável</h3>
+          <p>Conheça cães e gatos resgatados que procuram um lar calmo e amoroso.</p>
+          <a href="adocao.html" class="btn-acao btn-adotar">Conhecer Pets</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; 2026 Pet Shop Amigo - Acessibilidade para Todos.</p>
+    </div>
+  </footer>
+
+  <!-- VLIBRAS E SCRIPTS -->
+  <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+  <script>
+    let tamanho = 100;
+    document.getElementById('btn-aumentar').onclick = () => { if(tamanho < 150){ tamanho += 10; document.body.style.fontSize = tamanho + '%'; } };
+    document.getElementById('btn-diminuir').onclick = () => { if(tamanho > 80){ tamanho -= 10; document.body.style.fontSize = tamanho + '%'; } };
+    document.getElementById('btn-contraste').onclick = () => { document.body.classList.toggle('alto-contraste'); };
+  </script>
+</body>
+</html

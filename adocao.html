@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adoção - Pet Shop Amigo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="barra-acessibilidade" role="region" aria-label="Ferramentas de Acessibilidade">
+    <div class="container">
+      <span>Acessibilidade:</span>
+      <button id="btn-aumentar">A +</button>
+      <button id="btn-diminuir">A -</button>
+      <button id="btn-contraste">Alto Contraste</button>
+    </div>
+  </aside>
+
+  <header class="cabecalho">
+    <div class="container">
+      <h1>🐶 Pet Shop Amigo</h1>
+      <nav aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="adocao.html" class="ativo">Adote um Pet</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="secao">
+      <h2>Pets Disponíveis para Adoção</h2>
+      <p class="subtitulo">Informamos com clareza o temperamento de cada animal para encontrar o par ideal para a sua rotina.</p>
+
+      <div class="grid-cards">
+        <article class="card card-adocao">
+          <span class="icone" aria-hidden="true">🐕</span>
+          <h3>Pipoca</h3>
+          <ul class="detalhes-pet">
+            <li><strong>Espécie:</strong> Cão (Fêmea)</li>
+            <li><strong>Idade:</strong> 2 anos</li>
+            <li><strong>Temperamento:</strong> Calma, silenciosa e gosta de afeto.</li>
+            <li><strong>Ambiente Ideal:</strong> Locais tranquilos.</li>
+          </ul>
+          <a href="contato.html" class="btn-acao btn-adotar">Quero Adotar a Pipoca</a>
+        </article>
+
+        <article class="card card-adocao">
+          <span class="icone" aria-hidden="true">🐈</span>
+          <h3>Mimi</h3>
+          <ul class="detalhes-pet">
+            <li><strong>Espécie:</strong> Gato (Macho)</li>
+            <li><strong>Idade:</strong> 1 ano</li>
+            <li><strong>Temperamento:</strong> Independente e muito dócil.</li>
+            <li><strong>Ambiente Ideal:</strong> Lares calmos.</li>
+          </ul>
+          <a href="contato.html" class="btn-acao btn-adotar">Quero Adotar o Mimi</a>
+        </article>
+
+        <article class="card card-adocao">
+          <span class="icone" aria-hidden="true">🐕</span>
+          <h3>Thor</h3>
+          <ul class="detalhes-pet">
+            <li><strong>Espécie:</strong> Cão (Macho)</li>
+            <li><strong>Idade:</strong> 5 anos</li>
+            <li><strong>Temperamento:</strong> Paciente e amigável.</li>
+            <li><strong>Ambiente Ideal:</strong> Ambientes organizados.</li>
+          </ul>
+          <a href="contato.html" class="btn-acao btn-adotar">Quero Adotar o Thor</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape"><div class="container"><p>&copy; 2026 Pet Shop Amigo.</p></div></footer>
+
+  <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    let tamanho = 100;
+    document.getElementById('btn-aumentar').onclick = () => { if(tamanho < 150){ tamanho += 10; document.body.style.fontSize = tamanho + '%'; } };
+    document.getElementById('btn-diminuir').onclick = () => { if(tamanho > 80){ tamanho -= 10; document.body.style.fontSize = tamanho + '%'; } };
+    document.getElementById('btn-contraste').onclick = () => { document.body.classList.toggle('alto-contraste'); };
+  </script>
+</body>
+</html>

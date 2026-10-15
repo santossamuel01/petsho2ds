@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços - Pet Shop Amigo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="barra-acessibilidade" role="region" aria-label="Ferramentas de Acessibilidade">
+    <div class="container">
+      <span>Acessibilidade:</span>
+      <button id="btn-aumentar">A +</button>
+      <button id="btn-diminuir">A -</button>
+      <button id="btn-contraste">Alto Contraste</button>
+    </div>
+  </aside>
+
+  <header class="cabecalho">
+    <div class="container">
+      <h1>🐶 Pet Shop Amigo</h1>
+      <nav aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="servicos.html" class="ativo">Serviços</a></li>
+          <li><a href="adocao.html">Adote um Pet</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="secao">
+      <h2>Nossos Serviços Adaptados</h2>
+      <p class="subtitulo">Atendimentos agendados com tempo extra e equipe treinada para evitar barulhos e agitações.</p>
+
+      <div class="grid-cards">
+        <article class="card">
+          <span class="icone" aria-hidden="true">✂️</span>
+          <h3>Banho e Tosa Silencioso</h3>
+          <p>Secadores de baixo ruído e iluminação controlada para diminuir o estresse sensorial.</p>
+          <a href="contato.html" class="btn-acao">Agendar Horário</a>
+        </article>
+
+        <article class="card">
+          <span class="icone" aria-hidden="true">🩺</span>
+          <h3>Veterinário sem Apressamento</h3>
+          <p>Consultas com horários espaçados para que o ambiente fique calmo e sem filas na recepção.</p>
+          <a href="contato.html" class="btn-acao">Agendar Consulta</a>
+        </article>
+
+        <article class="card">
+          <span class="icone" aria-hidden="true">🏠</span>
+          <h3>Hospedagem Tranquila</h3>
+          <p>Espaços individuais organizados para descanso sem música ou ruídos intensos.</p>
+          <a href="contato.html" class="btn-acao">Reservar Vaga</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape"><div class="container"><p>&copy; 2026 Pet Shop Amigo.</p></div></footer>
+  
+  <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    let tamanho = 100;
+    document.getElementById('btn-aumentar').onclick = () => { if(tamanho < 150){ tamanho += 10; document.body.style.fontSize = tamanho + '%'; } };
+    document.getElementById('btn-diminuir').onclick = () => { if(tamanho > 80){ tamanho -= 10; document.body.style.fontSize = tamanho + '%'; } };
+    document.getElementById('btn-contraste').onclick = () => { document.body.classList.toggle('alto-contraste'); };
+  </script>
+</body>
+</html>
